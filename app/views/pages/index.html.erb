@@ -1,12 +1,14 @@
+<h2>Can you out run the zombie?</h2>
+
 <section class="user-data">
   <dl class="dl-horizontal">
     <dt>Name:</dt>
-    <dd></dd>
+    <dd><%= @user_data["displayName"] %></dd>
   </dl>
 
   <dl class="dl-horizontal">
     <dt>Distance:</dt>
-    <dd></dd>
+    <dd><%= @api["summary"]["distances"]["activity"][1]["distance"] %></dd>
   </dl>
 
   <dl class="dl-horizontal">
@@ -18,12 +20,13 @@
 <section class="user-data">
   <dl class="dl-horizontal">
     <dt>Name:</dt>
-    <dd></dd>
+    <dd><%= @zombie_data["displayName"] %>
+    </dd>
   </dl>
 
   <dl class="dl-horizontal">
     <dt>Distance:</dt>
-    <dd></dd>
+    <dd><%= @api_zombie["summary"]["distances"]["activity"][1]["distance"] %></dd>
   </dl>
 
   <dl class="dl-horizontal">
