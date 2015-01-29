@@ -17,5 +17,9 @@ require 'pp'
     @client.activities_on_date('today')
   end
 
+  def user_info
+    @client.user_info
+  end
+
 
 end
