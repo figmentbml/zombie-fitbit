@@ -1,6 +1,6 @@
 class Api < ActiveRecord::Base
 
-consumer_key = 'your-app-consumer-key'
+consumer_key = ''
 consumer_secret = 'your-app-consumer-secret'
 
 client = Fitbit::Client.new({:consumer_key => consumer_key, :consumer_secret => consumer_secret})
