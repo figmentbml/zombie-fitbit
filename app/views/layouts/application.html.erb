@@ -12,7 +12,7 @@
   <%= csrf_meta_tags %>
   <%= javascript_include_tag 'application' %>
 
-  <title>Zombiebit</title>
+  <title>Check out Zombiebit</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -47,8 +47,15 @@
         <div class="inner cover">
           <h1 class="cover-heading">Welcome to the Zombiebit Apocalypse</h1>
 
-
-          <a href="https://twitter.com/share" class="twitter-share-button" data-via="MrJadaml">Tweet</a>
+          <h3>
+          </h3>
+          <a class="twitter-share-button"
+          href="https://twitter.com/share">
+          Tweet
+        </a>
+        <script>
+        window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+        </script>
 
           <%= yield %>
         </div>
