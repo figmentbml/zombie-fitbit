@@ -1,21 +1,15 @@
-class Api < ActiveRecord::Base
+class Api
 
-consumer_key = ''
-consumer_secret = 'your-app-consumer-secret'
+  def initialize
+    consumer_key = '0537e64fc2af48baa199f5d9ea187656'
+    consumer_secret = '0537e64fc2af48baa199f5d9ea187656'
+    token = 'cc9ecf7b2c98bf7132d650c47f68a453'
+    secret = '99d64a453cd8f2ace01c376f21b0442f'
+    user_id = '26GVQN' # may be similar to '12345N'
 
-client = Fitbit::Client.new({:consumer_key => consumer_key, :consumer_secret => consumer_secret})
-
-request_token = client.request_token
-token = request_token.token
-secret = request_token.secret
-
-puts "Go to http://www.fitbit.com/oauth/authorize?oauth_token=#{token} and then enter the verifier code below and hit Enter"
-verifier = gets.chomp
-
-access_token = client.authorize(token, secret, { :oauth_verifier => verifier })
-
-puts "Verifier is: "+verifier
-puts "Token is:    "+access_token.token
-puts "Secret is:   "+access_token.secret
+    client = Fitgem::Client.new({:consumer_key => consumer_key, :consumer_secret => consumer_secret, :token => token, :secret => secret, :user_id => user_id})
+    access_token = client.reconnect(token, secret)
+    p client.user_info
+  end
 
 end
