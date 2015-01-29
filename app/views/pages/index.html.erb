@@ -8,28 +8,16 @@
     <h2>
     <section class="user-data">
       <dl class="dl-horizontal">
-        <dt>Name:</dt>
-      </dl>
-
-      <dl class="dl-horizontal">
-        <dt>Distance:</dt>
-      </dl>
-
-      <dl class="dl-horizontal">
+        <dt>Name: <%= @user_data["displayName"] %></dt>
+        <dt>Distance: <%= @api["summary"]["distances"][0]["distance"] %></dt>
         <dt>Status: Human</dt>
       </dl>
     </section>
 
     <section class="user-data">
       <dl class="dl-horizontal">
-        <dt>Name:</dt>
-      </dl>
-
-      <dl class="dl-horizontal">
-        <dt>Distance:</dt>
-      </dl>
-
-      <dl class="dl-horizontal">
+        <dt>Name: <%= @zombie_data["displayName"] %></dt>
+        <dt>Distance: <%= @api_zombie["summary"]["distances"][0]["distance"] %></dt>
         <dt>Status: Zombie</dt>
       </dl>
     </section>
