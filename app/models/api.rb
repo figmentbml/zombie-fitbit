@@ -2,7 +2,7 @@ class Api
 
   def initialize
     consumer_key = '0537e64fc2af48baa199f5d9ea187656'
-    consumer_secret = '0537e64fc2af48baa199f5d9ea187656'
+    consumer_secret = '7a4eb9a0b23647619c9bd6135a47f797'
     token = 'cc9ecf7b2c98bf7132d650c47f68a453'
     secret = '99d64a453cd8f2ace01c376f21b0442f'
     user_id = '26GVQN' # may be similar to '12345N'
