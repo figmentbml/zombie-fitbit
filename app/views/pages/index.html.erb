@@ -1,77 +1,40 @@
-<section class="user-data">
-  <dl class="dl-horizontal">
-    <dt>Name:</dt>
-    <dd></dd>
-  </dl>
-
-  <dl class="dl-horizontal">
-    <dt>Distance:</dt>
-    <dd></dd>
-  </dl>
-
-  <dl class="dl-horizontal">
-    <dt>Status:</dt>
-    <dd></dd>
-  </dl>
-</section>
+<h2>Can you out run the zombie?</h2>
 
 <section class="user-data">
   <dl class="dl-horizontal">
     <dt>Name:</dt>
-    <dd></dd>
+    <dd><%= @user_data["displayName"] %></dd>
   </dl>
 
   <dl class="dl-horizontal">
     <dt>Distance:</dt>
-    <dd></dd>
+    <dd><%= @api["summary"]["distances"][0]["distance"] %></dd>
   </dl>
 
   <dl class="dl-horizontal">
     <dt>Status:</dt>
-    <dd></dd>
-  </dl>
-</section>
-
-<section class="zombie-data">
-  <dl class="dl-horizontal">
-    <dt></dt>
-    <dd></dd>
-  </dl>
-
-  <dl class="dl-horizontal">
-    <dt>Distance:</dt>
-    <dd></dd>
-  </dl>
-
-  <dl class="dl-horizontal">
-    <dt>Status:</dt>
-    <dd></dd>
+    <dd>Human</dd>
   </dl>
 </section>
 
 <section class="user-data">
   <dl class="dl-horizontal">
     <dt>Name:</dt>
-    <dd></dd>
+    <dd><%= @zombie_data["displayName"] %>
+    </dd>
   </dl>
 
   <dl class="dl-horizontal">
     <dt>Distance:</dt>
-    <dd></dd>
+    <dd><%= @api_zombie["summary"]["distances"][0]["distance"] %></dd>
   </dl>
 
   <dl class="dl-horizontal">
     <dt>Status:</dt>
-    <dd></dd>
+    <dd>Zombie</dd>
   </dl>
 </section>
 
-
-<%= @api %>
-<hr>
-<%= @api_zombie %>
-<hr>
-<hr>
-<%= @user_data %>
-<hr>
-<%= @zombie_data %>
+<button name="zombie?">
+  Did you outrun the zombie?
+</button>
